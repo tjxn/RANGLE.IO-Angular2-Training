@@ -1,3 +1,19 @@
-<h1>
+<h2>
   {{title}}
-</h1>
+  Counter: {{counterNum}}
+  <app-hello [aName]="aName"></app-hello>
+</h2>
+<app-button>
+  <p class="secondButtonLabel"><b>Button 2</b></p>
+  <p class="firstButtonLabel"><i>Button 1</i></p>
+</app-button>
+<h1>
+  Parent Count: {{parentCount}}
+<h1>
+<app-counter (countChange)="onCountChange($event)"></app-counter>
+<app-counter (countChange)="onCountChange($event)"></app-counter>
+
+
+<div *ngFor="let item of itemList">
+{{item.value}}
+</div>
